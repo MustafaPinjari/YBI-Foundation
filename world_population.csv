@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="referrer" content="no-referrer" /><meta charset="UTF-8" /><title>
+	DataBank Error Page
+</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        p {
+            font-family:roboto;
+        }
+
+        ul {
+            font-family:roboto;
+        }
+
+        h3 {
+            font-family: roboto;
+            font-size: 18px;
+            color:#C70003;
+        }
+
+        a:link {
+            color: #003E67
+        }
+
+        a:hover {
+            color: #C70003;
+        }
+    </style>
+
+    <script type="text/JavaScript">
+        var wbgData = wbgData || {};
+        wbgData.page = {
+            pageInfo: {
+                pageName: "en:wb:reports:/error",
+                pageCategory: "errorPage",
+                pageUid: "databank-error", // format to be discussed
+                pageFirstPub: "01-01-2015", // format will be mm-dd-yyyy
+                pageLastMod: "01-01-2016", // format will be mm-dd-yyyy
+                contentType: "Other",
+                channel: "DEC Databank EXT"
+            },
+            sectionInfo: {
+                siteSection: "databank/error"
+            }
+        },
+        wbgData.site = {
+            siteInfo: {
+                siteLanguage: "en", // format should be en,fr etc.
+                siteCountry: "usa", // format should be usa, ind etc.
+                siteEnv: "prod", // format should be prod,stg,uat etc.
+                siteType: "developmentdata"
+            },
+            techInfo: {
+                cmsType: "sharepoint",
+                bussVPUnit: "DEC",
+                bussUnit: "DECDG",
+                bussUserGroup: "external",
+                bussAgency: "ibrd"
+            }
+        },
+        wbgData.errorInfo = {
+            pageloadRule: "404 error",
+            pageType: "errorPage",
+            errorMessage: "page not found"
+        },
+        wbgData.misc = {
+            dataFilters: ""
+        }
+    </script>
+
+
+    <script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/launch-7bc0cdc67098.min.js" async></script>
+</head>
+<body>
+    <div style="margin:auto; width: 60%; padding: 10px;">
+        <a href="/home"><div style="border-bottom: 1px solid #003E67"><img style="border-width: 0px;" src="images/databank-error-banner-2016.png" width="367" height="75" alt="" /></div></a>
+
+        
+        <div id="ctlcmnerr" style="padding-left:75px">            
+            <h3>An error has occurred</h3>
+            <p>This might be due to:</p>
+            <ul>
+                <li>An unusually heavy traffic to our network</li>
+                <li>Server not currently available</li>
+            </ul>
+            <p>Please try again later or contact <a href="mailto:data@worldbank.org">data@worldbank.org</a></p>
+        </div>
+        
+
+        
+        
+        
+
+        
+        
+        
+
+       
+
+        <div id="ctlerridblock" style="padding-left: 75px">
+            
+        </div>
+    </div>
+
+
+    <script type="text/JavaScript">
+        if (document.getElementById('ctlrpterr') != null) {
+            wbgData.errorInfo.pageloadRule = "500 error";
+            wbgData.errorInfo.errorMessage = "report error";
+        }
+        else if (document.getElementById('ctlssnerr') != null) {
+            wbgData.errorInfo.pageloadRule = "440 error";
+            wbgData.errorInfo.errorMessage = "session error";
+        }
+        else if (document.getElementById('ctl404') != null) {
+            wbgData.errorInfo.pageloadRule = "404 error";
+            wbgData.errorInfo.errorMessage = "page not found";
+        }
+        else {
+            wbgData.errorInfo.pageloadRule = "400 error";
+            wbgData.errorInfo.errorMessage = "unknown error";
+        }
+
+       /* _satellite.pageBottom();*/
+    </script>
+
+
+</body>
+</html>
